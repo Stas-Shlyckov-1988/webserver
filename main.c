@@ -13,7 +13,8 @@ void route()
     ROUTE_GET("/")
     {
         printf("HTTP/1.1 200 OK\r\n\r\n");
-        printf("Hello! You are using %s", request_header("User-Agent"));
+        printf("<h1>Hello! You are using</h1> %s", request_header("User-Agent"));
+		printf("<br><a href=\"/detail\">detail</a>.");
     }
 
     ROUTE_POST("/")
@@ -21,7 +22,15 @@ void route()
         printf("HTTP/1.1 200 OK\r\n\r\n");
         printf("Wow, seems that you POSTed %d bytes. \r\n", payload_size);
         printf("Fetch the data using `payload` variable.");
+		
     }
+	
+	ROUTE_GET("/detail")
+	{
+		printf("HTTP/1.1 200 OK\r\n\r\n");
+		printf("<h1>Example web site.</h1>");
+		printf("<p>detail</p>");
+	}
   
     ROUTE_END()
 }
