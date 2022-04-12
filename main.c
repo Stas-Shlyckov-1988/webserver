@@ -13,7 +13,7 @@ void route()
     ROUTE_GET("/")
     {
         printf("HTTP/1.1 200 OK\r\n\r\n");
-        printf("<h1>Hello! You are using</h1> %s", request_header("User-Agent"));
+        printf("<h1>Hello! You are using</h1> <p style=\"color: blue;\">%s</p>", request_header("User-Agent"));
 		printf("<br><a href=\"/detail\">detail</a>.");
     }
 
