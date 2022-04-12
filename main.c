@@ -29,7 +29,7 @@ void route()
 	{
 		printf("HTTP/1.1 200 OK\r\n\r\n");
 		printf("<h1>Example web site.</h1>");
-		printf("<p>detail</p>");
+		printf("<p>This is detail page.<br>Current web site from web server of the fork nginx.</p>");
 	}
   
     ROUTE_END()
